@@ -42,18 +42,19 @@
                   <h1>
                     100 Roses from Concrete
                  </h1>
-				   <div id="adobe-dc-view" style="height: 360px; width: 500px;"></div>
-<script src="https://drive.google.com/file/d/1M-bI5yIGXp7ZW8X4ACMrRFalmPVgasxH/view"></script>
-<script type="text/javascript">
-	document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
-		var adobeDCView = new AdobeDC.View({clientId: "<3fe284a2412d49ba804fc9788971a153>", divId: "adobe-dc-view"});
-		adobeDCView.previewFile({
-			content:{promise: "<FILE_BLOB_PROMISE>"},
-			metaData:{fileName: "<FILE_NAME>"}
-		}, {embedMode: "SIZED_CONTAINER", dockPageControls: false, showDownloadPDF: false, 
-			showPrintPDF: false});
-	});
-</script>
+				   <div id="adobe-dc-view"></div>
+ <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+ <script type="text/javascript">
+    document.addEventListener("adobe_dc_view_sdk.ready", function()
+    {
+        var adobeDCView = new AdobeDC.View({clientId: "<YOUR_CLIENT_ID>", divId: "adobe-dc-view"});
+        adobeDCView.previewFile(
+       {
+          content:   {location: {url: "https://documentcloud.adobe.com/view-sdk-demo/PDFs/Bodea Brochure.pdf"}},
+          metaData: {fileName: "Bodea Brochure.pdf"}
+       });
+    });
+ </script>
                </div>
             </div>
             <br>
